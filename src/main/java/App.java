@@ -8,5 +8,23 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        Mobile mobile = new Mobile("a","red","b");
+        mobile.call("6666");
+        mobile.printInfo();
+        iPhone iPhone = new iPhone("b", "blue", "c");
+        iPhone.call("23333");
+        AndriodMobile andriodMobile = new AndriodMobile("c", "grey", "d");
+        andriodMobile.call("777777");
+
+        System.out.println("=========================");
+
+        Person person = new Person("123");
+        person.setMobile(iPhone);
+        person.usePhone("vvvvvvvvvvvvvv");
+        person.setMobile(andriodMobile);
+        person.usePhone("xxxxx");
+
+        IPhoneRobot iPhoneRobot = new IPhoneRobot("zzz", iPhone);
+        iPhoneRobot.usePhone("bbbb");
     }
 }
